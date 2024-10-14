@@ -10,6 +10,7 @@ import {
   Button,
   Container,
   IconButton,
+  IconButtonProps,
   LinearProgress,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -64,7 +65,7 @@ interface CustomButtonProps {
   isActive: boolean;
 }
 
-const CustomButton = styled((props: CustomButtonProps & any) => (
+const CustomButton = styled((props: CustomButtonProps & IconButtonProps) => (
   <IconButton {...props} />
 ))(({ theme, isActive }) => ({
   width: "32px",

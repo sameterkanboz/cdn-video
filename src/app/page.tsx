@@ -9,6 +9,7 @@ import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import {
   Box,
   Button,
+  ButtonProps,
   Container,
   IconButton,
   LinearProgress,
@@ -60,7 +61,7 @@ interface CustomButtonProps {
   isActive: boolean;
 }
 
-const CustomButton = styled((props: CustomButtonProps & any) => (
+const CustomButton = styled((props: CustomButtonProps & ButtonProps) => (
   <Button {...props} />
 ))(({ theme, isActive }) => ({
   backgroundColor: isActive ? theme.palette.common.white : "rgba(0, 0, 0, 0.5)",
